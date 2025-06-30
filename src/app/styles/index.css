@@ -1,0 +1,13 @@
+#root {
+	background-color: var(--color-background);
+	font-family: 'Roboto', sans-serif;
+	font-size: var(--font-size-m);
+	color: var(--color-black);
+}
+
+.page-wrapper {
+	padding: 40px 0;
+	margin: 0 auto;
+	width: var(--page-width);
+	min-height: 100vh;
+}
