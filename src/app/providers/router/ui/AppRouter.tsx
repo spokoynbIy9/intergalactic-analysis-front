@@ -1,5 +1,5 @@
 import type { AppRoutesProps } from '@/shared/config/routes';
-import { Layout } from '@/widgets/layout';
+import { Layout } from '@/widgets/Layout';
 import { useCallback } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { routeConfig } from '../config/routeConfig';
