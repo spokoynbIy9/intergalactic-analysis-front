@@ -1,4 +1,4 @@
-import { Logo } from '@/shared/assets/icons/Logo';
+import { Logo } from '@/shared/assets/icons/iconsName/Logo';
 import { Typography } from '@/shared/ui/Typography';
 
 import styles from './Title.module.css';
