@@ -1,5 +1,7 @@
 import type { FC, ReactNode } from 'react';
 
+import { Header } from '@/widgets/Header';
+
 interface LayoutProps {
 	children: ReactNode;
 }
@@ -7,7 +9,7 @@ interface LayoutProps {
 const Layout: FC<LayoutProps> = ({ children }) => {
 	return (
 		<div className="page-wrapper">
-			<p>Header</p>
+			<Header />
 			<div>{children}</div>
 		</div>
 	);
