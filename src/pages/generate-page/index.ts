@@ -1,3 +1,3 @@
-import GeneratePage from './ui/GeneratePage';
+import GeneratePage from './GeneratePage';
 
 export { GeneratePage };

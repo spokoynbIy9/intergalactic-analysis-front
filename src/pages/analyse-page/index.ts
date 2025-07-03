@@ -1,3 +1,3 @@
-import AnalysePage from './ui/AnalysePage';
+import AnalysePage from './AnalysePage';
 
 export { AnalysePage };
