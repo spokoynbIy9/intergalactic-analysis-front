@@ -3,9 +3,10 @@
 	--space-xl: calc(var(--space-s) * 5);
 	--page-width: calc(100vw - var(--space-xl));
 
-	--font-size-s: 20px;
-	--font-size-m: 25px;
-	--font-size-l: 30px;
+	--font-size-xs: 20px;
+	--font-size-s: 25px;
+	--font-size-m: 30px;
+	--fint-size-l: 35px;
 	--font-size-xl: 40px;
 
 	--color-black: #201b10;
