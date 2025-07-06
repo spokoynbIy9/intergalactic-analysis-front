@@ -9,6 +9,13 @@
 	--fint-size-l: 35px;
 	--font-size-xl: 40px;
 
+	--border-radius-xs: 10px;
+	--border-radius-s: 20px;
+	--border-radius-m: 25px;
+	--border-radius-l: 30px;
+	--border-radius-xl: 40px;
+	--border-radius-xxl: 45px;
+
 	--color-black: #201b10;
 	--color-white: #ffffff;
 	--color-background: #fce2ff;
