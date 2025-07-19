@@ -72,5 +72,5 @@
 }
 
 .text-color-error {
-	color: var(--color-white);
+	color: var(--color-primary-error);
 }
