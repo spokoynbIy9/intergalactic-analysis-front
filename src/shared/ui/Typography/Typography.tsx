@@ -8,7 +8,7 @@ import styles from './Typography.module.css';
 
 type TypographyProps = PropsWithChildren &
 	WithClassName & {
-		color?: 'dark' | 'light' | 'purple' | 'error';
+		color?: 'dark' | 'light' | 'purple' | 'error' | 'validation-error';
 		size?: 'xs' | 's' | 'm' | 'l' | 'xl';
 		as?: 'span' | 'div' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 		weight?: 'light' | 'regular' | 'medium' | 'bold' | 'extrabold';

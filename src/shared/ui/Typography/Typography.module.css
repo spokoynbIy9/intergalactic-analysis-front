@@ -72,5 +72,9 @@
 }
 
 .text-color-error {
+	color: var(--color-accent-orange);
+}
+
+.test-color-validation-error {
 	color: var(--color-primary-error);
 }
