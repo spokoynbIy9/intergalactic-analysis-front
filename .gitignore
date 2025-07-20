@@ -24,3 +24,5 @@ commits.jpg
 *.njsproj
 *.sln
 *.sw?
+
+.env
