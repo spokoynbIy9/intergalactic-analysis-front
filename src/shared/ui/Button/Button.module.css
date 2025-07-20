@@ -37,6 +37,7 @@
 
 /* Состояние disabled */
 .disabled {
-	opacity: 0.6;
+	background-color: var(--color-accent-gray);
+	color: var(--color-primary-gray);
 	cursor: not-allowed;
 }
