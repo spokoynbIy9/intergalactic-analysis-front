@@ -21,6 +21,12 @@
 	color: var(--color-black);
 }
 
+/* Кнопка "Обработки" */
+.process {
+	min-width: 300px;
+	background-color: var(--color-accent-purple);
+}
+
 /* Кнопка "Очистить" (черная) */
 .clear {
 	background-color: var(--color-black);

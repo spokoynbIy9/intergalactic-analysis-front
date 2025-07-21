@@ -3,7 +3,13 @@ import cn from 'classnames';
 
 import styles from './Button.module.css';
 
-type Variant = 'primary' | 'secondary' | 'download' | 'upload' | 'clear';
+type Variant =
+	| 'primary'
+	| 'secondary'
+	| 'download'
+	| 'upload'
+	| 'clear'
+	| 'process';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 	children: React.ReactNode;
