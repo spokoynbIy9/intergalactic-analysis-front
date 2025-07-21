@@ -1,9 +1,6 @@
-export type AnalysisStatus = 'idle' | 'processing' | 'completed' | 'error';
+import type { AnalysisHighlight } from '@/entities/highlights/model/types/highlight.type';
 
-export interface AnalysisHighlight {
-	title: string;
-	description: string;
-}
+export type AnalysisStatus = 'idle' | 'processing' | 'completed' | 'error';
 
 export interface IAnalysisSlice {
 	highlights: AnalysisHighlight[];
