@@ -129,7 +129,9 @@ export const Dropzone: FC<DropzoneProps> = ({
 		if (isProcessing) {
 			return (
 				<div className={styles.fileProcessing}>
-					<Loader />
+					<Button variant="process">
+						<Loader />
+					</Button>
 				</div>
 			);
 		}
