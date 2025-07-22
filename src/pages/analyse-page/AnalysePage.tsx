@@ -4,7 +4,7 @@ import styles from './AnalysePage.module.css';
 import { useAnalysisStore } from '@/features/analyse-file/model/store';
 import { useCsvAnalysis } from '@/features/analyse-file/lib/useCsvAnalysis';
 import type { Highlights } from '@/entities/highlights/model/types/highlights.type';
-import { addToHistory } from '@/features/analyse-file/lib/historyStorage';
+import { addToHistory } from '@/features/history/lib/historyStorage';
 import { HighlightsSection } from '@/entities/highlights/ui/HighlightsSection';
 
 const AnalysePage = () => {
