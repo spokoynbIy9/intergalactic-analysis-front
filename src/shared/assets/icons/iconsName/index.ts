@@ -3,3 +3,8 @@ export * from './Upload';
 export * from './Create';
 export * from './History';
 export * from './Clear';
+export * from './File';
+export * from './Smile';
+export * from './SmileSad';
+export * from './Trash';
+export * from './Cross';
