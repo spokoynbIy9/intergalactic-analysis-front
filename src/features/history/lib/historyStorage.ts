@@ -1,4 +1,4 @@
-import { STORAGE_KEY } from '../../analyse-file/config/storage';
+import { STORAGE_KEY } from '../config/storage';
 import type { HistoryItemType } from '../model/types/historyItem.type';
 
 export const getHistory = (): HistoryItemType[] => {
