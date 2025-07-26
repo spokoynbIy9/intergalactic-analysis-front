@@ -38,7 +38,7 @@ export const HistoryItem: FC<HistoryItemProps> = ({
 	};
 
 	return (
-		<div className={styles.root}>
+		<div className={styles.root} data-testid="history-item">
 			<Button
 				type="button"
 				variant="secondary"
@@ -62,6 +62,7 @@ export const HistoryItem: FC<HistoryItemProps> = ({
 				className={styles.deleteButton}
 				aria-label={`Удалить файл ${fileName}`}
 				onClick={handleDeleteButtonClick}
+				data-testid="history-item-delete-button"
 			>
 				<Trash size={33} />
 			</Button>
