@@ -1,11 +1,12 @@
 import { STORAGE_KEY } from '@/features/history/config/storage';
 import { useHistoryStore } from '@/features/history/model/store';
 import { historyMock } from '@tests/test-data/mocks/history';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { beforeEach, describe, expect, it } from 'vitest';
 
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import HistoryPage from '../HistoryPage';
+import { GeneratePage } from '@/pages/generate-page';
 
 // Мокируем localStorage с дополнительными возможностями
 const localStorageMock = (() => {
@@ -130,5 +131,25 @@ describe('Интеграционные тесты для HistoryPage', () => {
 		expect(
 			screen.queryByTestId('clear-history-button')
 		).not.toBeInTheDocument();
+	});
+
+	it('TC-HY-005: Кнопка "Сгенерировать больше" перенаправляет на страницу генерации', async () => {
+		render(
+			<MemoryRouter
+				initialEntries={['/history']} // Стартуем на странице истории
+			>
+				<Routes>
+					<Route path="/history" element={<HistoryPage />} />
+					<Route path="/generate" element={<GeneratePage />} />
+				</Routes>
+			</MemoryRouter>
+		);
+
+		const generateMoreButton = screen.getByTestId('generate-more-button');
+		fireEvent.click(generateMoreButton);
+
+		await waitFor(() => {
+			expect(screen.getByTestId('generate-button')).toBeInTheDocument();
+		});
 	});
 });
