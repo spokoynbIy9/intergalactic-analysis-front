@@ -42,6 +42,7 @@ export const FileUploadSection: FC<FileUploadSection> = ({
 					disabled={!file}
 					onClick={onSend}
 					className={styles.sendButton}
+					data-testid="send-button"
 				>
 					Отправить
 				</Button>

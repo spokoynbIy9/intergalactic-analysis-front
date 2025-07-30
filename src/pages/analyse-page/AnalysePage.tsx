@@ -58,7 +58,7 @@ const AnalysePage = () => {
 	};
 
 	return (
-		<div className={styles.container}>
+		<div className={styles.container} data-testid="analyse-page">
 			<Typography>
 				Загрузите <b>csv</b> файл и получите <b>полную информацию</b> о
 				нём за сверхнизкое время
