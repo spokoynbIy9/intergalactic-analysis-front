@@ -25,12 +25,16 @@ const test = base
 		pages: async ({ page }, use) => {
 			const pages = {
 				generate: new pageClasses.generate(page),
+				analyse: new pageClasses.analyse(page),
+				history: new pageClasses.history(page),
 			};
 			await use(pages);
 		},
 		actions: async ({ page, pages }, use) => {
 			const actions = {
 				generate: new actionClasses.generate(page, pages),
+				analyse: new actionClasses.analyse(page, pages),
+				history: new actionClasses.history(page, pages),
 			};
 			await use(actions);
 		},
