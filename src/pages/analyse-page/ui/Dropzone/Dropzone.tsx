@@ -162,32 +162,24 @@ export const Dropzone: FC<DropzoneProps> = ({
 
 	const renderStatusText = () => {
 		if (validationError) {
-			return (
-				<Typography color="validation-error">
-					{validationError}
-				</Typography>
-			);
+			return validationError;
 		}
 		if (isProcessing) {
-			return <Typography size="l">идёт парсинг файла</Typography>;
+			return 'идёт парсинг файла';
 		}
 		if (status === 'completed') {
-			return <Typography size="l">готово!</Typography>;
+			return 'готово!';
 		}
 		if (error) {
-			return (
-				<Typography color="error" size="l">
-					упс, не то...
-				</Typography>
-			);
+			return 'упс, не то...';
 		}
 		if (file) {
-			return <Typography size="l">файл загружен!</Typography>;
+			return 'файл загружен!';
 		}
 		if (isDragActive) {
-			return <Typography size="l">Отпустите для загрузки'</Typography>;
+			return 'Отпустите для загрузки';
 		}
-		return <Typography size="l">или перетащите сюда .csv файл</Typography>;
+		return 'или перетащите сюда .csv файл';
 	};
 
 	return (
@@ -202,6 +194,7 @@ export const Dropzone: FC<DropzoneProps> = ({
 			onDragLeave={handleDragLeave}
 			onDrop={handleDrop}
 			onClick={handleZoneClick}
+			data-testid="dropzone"
 		>
 			<input
 				type="file"
@@ -209,11 +202,24 @@ export const Dropzone: FC<DropzoneProps> = ({
 				ref={inputRef}
 				onChange={handleInputChange}
 				hidden
+				data-testid="dropzone-input"
 			/>
 
 			{renderContent()}
 
-			<>{renderStatusText()}</>
+			<Typography
+				color={
+					validationError
+						? 'validation-error'
+						: error
+						? 'error'
+						: undefined
+				}
+				size="l"
+				data-testid="dropzone-status"
+			>
+				{renderStatusText()}
+			</Typography>
 		</div>
 	);
 };

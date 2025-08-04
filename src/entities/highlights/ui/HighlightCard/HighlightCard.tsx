@@ -15,7 +15,10 @@ export const HighlightCard: FC<HighlightCardProps> = ({
 	className,
 }) => {
 	return (
-		<div className={cn(styles.highlightCard, className)}>
+		<div
+			className={cn(styles.highlightCard, className)}
+			data-testid="highlight-card"
+		>
 			<Typography size="xl" weight="medium">
 				{highlight.title}
 			</Typography>

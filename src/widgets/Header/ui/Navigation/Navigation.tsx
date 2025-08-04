@@ -10,16 +10,19 @@ export const Navigation = () => {
 				to={RoutePath.AnalysePage}
 				title="CSV Аналитик"
 				icon={<Upload size={36} />}
+				data-testid="navigation-analyse"
 			/>
 			<NavItem
 				to={RoutePath.GeneratePage}
 				title="CSV Генератор"
 				icon={<Create size={36} />}
+				data-testid="navigation-generate"
 			/>
 			<NavItem
 				to={RoutePath.HistoryPage}
 				title="История"
 				icon={<History size={36} />}
+				data-testid="navigation-history"
 			/>
 		</nav>
 	);

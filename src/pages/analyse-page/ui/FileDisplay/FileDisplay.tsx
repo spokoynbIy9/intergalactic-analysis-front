@@ -21,7 +21,7 @@ export const FileDisplay: FC<FileDisplayProps> = ({
 	onClear,
 }) => {
 	return (
-		<div className={styles.fileControls}>
+		<div className={styles.fileControls} data-testid="dropzone-content">
 			<div className={styles.fileInfo}>
 				<Typography
 					className={cn(styles.fileName, {
@@ -38,6 +38,7 @@ export const FileDisplay: FC<FileDisplayProps> = ({
 				className={cn(styles.clearFileButton, styles.customBorder)}
 				onClick={onClear}
 				disabled={isProcessing}
+				data-testid="dropzone-clear-button"
 			>
 				<Clear size={22} />
 			</Button>

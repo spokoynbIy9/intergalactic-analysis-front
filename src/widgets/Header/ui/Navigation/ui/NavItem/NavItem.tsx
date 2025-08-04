@@ -11,15 +11,23 @@ type NavItemProps = {
 	to: string;
 	title: string;
 	icon: ReactNode;
+
+	'data-testid'?: string;
 };
 
-export const NavItem: FC<NavItemProps> = ({ to, title, icon }) => {
+export const NavItem: FC<NavItemProps> = ({
+	to,
+	title,
+	icon,
+	'data-testid': testId,
+}) => {
 	return (
 		<NavLink
 			to={to}
 			className={({ isActive }: { isActive: boolean }) =>
 				cn(styles.root, { [styles.active]: isActive })
 			}
+			data-testid={testId}
 		>
 			{icon} <Typography size="m">{title}</Typography>
 		</NavLink>

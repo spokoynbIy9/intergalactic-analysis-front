@@ -25,7 +25,11 @@ export const HistoryModal: FC = () => {
 	);
 
 	return (
-		<Modal isOpen={isOpenModal} onClose={hideModal}>
+		<Modal
+			isOpen={isOpenModal}
+			onClose={hideModal}
+			data-testid={'history-modal'}
+		>
 			<div className={styles.root}>
 				<div className={styles.highlights}>
 					{hightlights.map((highlight) => (

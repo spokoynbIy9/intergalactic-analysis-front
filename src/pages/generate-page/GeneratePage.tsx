@@ -76,18 +76,6 @@ const GeneratePage = () => {
 		}
 	};
 
-	// useEffect(() => {
-	// 	if (!successMessage) {
-	// 		return;
-	// 	}
-
-	// 	const timeout = setTimeout(() => {
-	// 		setSuccessMessage(null);
-	// 	}, 2000);
-
-	// 	return () => clearTimeout(timeout);
-	// }, [successMessage]);
-
 	const renderStatusText = () => {
 		if (error) {
 			return 'Ошибка';
@@ -103,13 +91,14 @@ const GeneratePage = () => {
 	};
 
 	return (
-		<div className={styles.container}>
+		<div className={styles.container} data-testid="generate-page">
 			<Typography as="h1" size="m" className={styles.title}>
 				Сгенерируйте готовый csv-файл нажатием одной кнопки
 			</Typography>
 
 			<div className={styles.buttonWrapper}>
 				<Button
+					data-testid="generate-button"
 					type="button"
 					variant={isGenerating ? 'process' : 'primary'}
 					onClick={handleGenerate}
@@ -139,12 +128,21 @@ const GeneratePage = () => {
 				)}
 			</div>
 			{successMessage && (
-				<Typography as="p" size="l">
+				<Typography
+					as="p"
+					size="l"
+					data-testid="generate-success-message"
+				>
 					{successMessage}
 				</Typography>
 			)}
 			{error && (
-				<Typography as="p" size="l" color="error">
+				<Typography
+					as="p"
+					size="l"
+					color="error"
+					data-testid="generate-error-message"
+				>
 					{error}
 				</Typography>
 			)}

@@ -6,7 +6,7 @@ import { HistoryModal } from './ui/HistoryModal';
 
 const HistoryPage = () => {
 	return (
-		<div className={styles.container}>
+		<div className={styles.container} data-testid="history-page">
 			<HistoryList />
 			<div className={styles.actions}>
 				<GenerateMoreButton />
